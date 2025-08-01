@@ -2,8 +2,11 @@ import React from "react";
 import { IceCreamCone } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
+type ButtonAddProps = {
+  children: ReactNode;
+};
 
-const BadgeButton = ({ children }) => {
+const BadgeButton = ({ children }: ButtonAddProps) => {
   return (
     <Badge
       variant="outline"
