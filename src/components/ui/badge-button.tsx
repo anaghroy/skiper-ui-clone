@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { IceCreamCone } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
