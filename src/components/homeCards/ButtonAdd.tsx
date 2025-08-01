@@ -1,7 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Sticker } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-const ButtonAdd = ({ children }) => {
+type ButtonAddProps = {
+  children: ReactNode;
+};
+const ButtonAdd = ({ children }: ButtonAddProps) => {
   return (
     <Badge
       variant="outline"
