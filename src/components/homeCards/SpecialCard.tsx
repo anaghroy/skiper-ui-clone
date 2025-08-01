@@ -51,6 +51,8 @@ const SpecialCard = () => {
               "pointer-events-none w-[90%] overflow-hidden rounded-t-[24px] border border-stone-100/10 transition-all duration-500 dark:border-stone-700",
               "left-[5%] top-[50%] md:left-1/2 md:left-[68px] md:top-[30%]"
             )}
+            //  eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            //   @ts-ignore
             image={{
               step1light1: feature1,
               step1light2: feature2,
