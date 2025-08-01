@@ -7,7 +7,9 @@ const HeroContent = () => {
   return (
     <>
       <div className="flex flex-col items-center py-16">
-        <img
+        <Image
+          height={200}
+          width={200}
           className="h-10 mb-14"
           src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=806890&theme=light&t=1737565356562"
           alt=""

@@ -84,7 +84,7 @@ export default function AiInput() {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handelClose = (e: any) => {
+  const handelClose = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
     if (fileInputRef.current) {
@@ -93,8 +93,9 @@ export default function AiInput() {
     setImagePreview(null); // Use null instead of empty string
   };
 
-  const handelChange = (e: any) => {
-    const file = e.target.files ? e.target.files[0] : null;
+  const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    const file = target.files?.[0];
     if (file) {
       setImagePreview(URL.createObjectURL(file));
     }
@@ -178,6 +179,7 @@ export default function AiInput() {
                       alt="additional image"
                     />
                     <button
+                      title="button"
                       onClick={handelClose}
                       className="bg-[#e8e8e8] text-[#464646] absolute -top-1 -left-1 shadow-3xl rounded-full rotate-45"
                     >
@@ -188,6 +190,7 @@ export default function AiInput() {
               </label>
               <button
                 type="button"
+                title="button"
                 onClick={() => {
                   setShowSearch(!showSearch);
                 }}
@@ -248,6 +251,7 @@ export default function AiInput() {
             <div className="absolute right-3 bottom-3">
               <button
                 type="button"
+                title="button"
                 onClick={handleSubmit}
                 className={cn(
                   "rounded-full p-2 transition-colors",
